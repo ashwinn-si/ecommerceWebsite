@@ -5,6 +5,8 @@ import com.ashwinsi.auth_service.DTO.SellerJwtData;
 import com.ashwinsi.auth_service.DTO.UserJwtData;
 import com.ashwinsi.auth_service.Domain.Seller;
 import com.ashwinsi.auth_service.Domain.User;
+import com.ashwinsi.auth_service.Service.Domain.SellerService;
+import com.ashwinsi.auth_service.Service.Domain.UserService;
 import com.ashwinsi.auth_service.Utils.BcryptService;
 import com.ashwinsi.auth_service.Utils.JwtService;
 import lombok.AllArgsConstructor;

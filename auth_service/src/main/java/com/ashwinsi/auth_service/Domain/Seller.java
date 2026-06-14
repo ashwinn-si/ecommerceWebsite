@@ -22,4 +22,10 @@ public class Seller {
     private String password;
 
     private boolean isAdmin;
+
+    public Seller(String email, String password, boolean isAdmin) {
+        this.email = email;
+        this.password = password;
+        this.isAdmin = isAdmin;
+    }
 }
