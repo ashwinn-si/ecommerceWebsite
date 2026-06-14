@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class SellerJwtData {
-    private Integer id;
+    private Long id;
+    private String email;
     private Boolean isAdmin;
 }

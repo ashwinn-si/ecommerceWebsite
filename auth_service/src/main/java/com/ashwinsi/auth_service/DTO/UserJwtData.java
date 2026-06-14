@@ -6,5 +6,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class UserJwtData {
-    private Integer id;
+    private Long id;
+    private String email;
 }

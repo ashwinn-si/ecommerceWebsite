@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     private String email;
 
