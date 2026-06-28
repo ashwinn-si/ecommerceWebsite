@@ -1,0 +1,22 @@
+package com.ashwinsi.auth_service.Utils;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+
+@Data
+@AllArgsConstructor
+class ResponseData <T>{
+    private HttpStatus httpStatus;
+    private String message;
+    private T data;
+}
+
+
+public class ResponseHandler {
+    public static <T> ResponseEntity<ResponseData<T>> handleResponse  (HttpStatus httpStatus, T data, String message){
+        return ResponseEntity.status(httpStatus).body(new ResponseData(httpStatus, message, data));
+    }
+}
