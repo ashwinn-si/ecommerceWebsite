@@ -41,52 +41,6 @@ public class JwtService {
                 .compact();
     }
 
-    public UserJwtData parseUserToken(String jwtToken) {
-        try {
-            Claims claims = Jwts.parser()
-                    .verifyWith(SECRET_KEY)
-                    .build()
-                    .parseSignedClaims(jwtToken)
-                    .getPayload();
-
-
-            Long id = claims.get("id", Long.class);
-            String email = claims.get("email", String.class);
-
-            return new UserJwtData(id, email);
-        } catch (JwtException | IllegalArgumentException e) {
-
-            return null;
-        }
-    }
-
-    public SellerJwtData parseSellerToken(String jwtToken) {
-        try {
-            Claims claims = Jwts.parser()
-                    .verifyWith(SECRET_KEY)
-                    .build()
-                    .parseSignedClaims(jwtToken)
-                    .getPayload();
-
-
-            Long id = claims.get("id", Long.class);
-            String email = claims.get("email", String.class);
-            Boolean isAdmin = claims.get("isAdmin", Boolean.class);
-
-            return new SellerJwtData(id, email, isAdmin);
-        } catch (JwtException | IllegalArgumentException e) {
-            return null;
-        }
-    }
-
-    public boolean isValidToken(String jwtToken) {
-        try {
-            Jwts.parser().verifyWith(SECRET_KEY).build().parseSignedClaims(jwtToken);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
 
     private Claims generateUserClaims(UserJwtData userJwtData) {
         return Jwts.claims()

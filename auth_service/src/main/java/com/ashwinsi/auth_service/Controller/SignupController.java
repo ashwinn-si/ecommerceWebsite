@@ -18,7 +18,7 @@ class SignupDTO{
 }
 
 @RestController
-@RequestMapping("/signup")
+@RequestMapping("/auth/signup")
 public class SignupController {
     @Autowired
     private SignupService signupService;

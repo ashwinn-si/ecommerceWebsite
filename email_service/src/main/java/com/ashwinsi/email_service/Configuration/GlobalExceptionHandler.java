@@ -1,7 +1,7 @@
-package com.ashwinsi.auth_service.Configuration;
+package com.ashwinsi.email_service.Configuration;
 
-import com.ashwinsi.auth_service.DTO.CustomError;
-import com.ashwinsi.auth_service.Utils.ResponseHandler;
+import com.ashwinsi.email_service.DTO.CustomError;
+import com.ashwinsi.email_service.Utils.ResponseHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

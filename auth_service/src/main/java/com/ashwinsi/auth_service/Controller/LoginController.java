@@ -17,7 +17,7 @@ class LoginDTO{
 }
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/auth/login")
 public class LoginController {
 
     @Autowired

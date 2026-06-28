@@ -1,10 +1,9 @@
-package com.ashwinsi.auth_service.Utils;
+package com.ashwinsi.email_service.Utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 
 @Data
 @AllArgsConstructor
